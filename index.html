@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap v2</title>
+    <!--Bootstrap-->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!--启动响应式-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Hello Bootstrap</h1>
+    <!--带有基本栅格的HTML代码-->
+    <!--class为offset代表偏移列-->
+    <div class="row">
+        <div class="span4 offset4" style="background-color: rgba(255,0,0,0.31)">span4...</div>
+        <div class="span8" style="background-color:#a2ff6d">span6...</div>
+    </div>
+    <!--嵌套列-->
+    <div class="row">
+        <div class="span9" style="background-color: #b2c3ff">
+            Level 1 column span9
+            <div class="row">
+                <div class="span3" style="background-color:grey">
+                    Level 2 span3
+                </div>
+                <div class="span6" style="background-color: #0e90d2">Level 2 span6</div>
+            </div>
+        </div>
+    </div>
+
+    <!--流式栅格系统对每一列的宽度使用百分比而不是像素数量。它和固定栅格系统一样拥有响应式布局的能力，这就保证它能对不同的分辨率和设备做出适当的调整。-->
+    <h6>流式栅格系统对每一列的宽度使用百分比而不是像素数量。它和固定栅格系统一样拥有响应式布局的能力，这就保证它能对不同的分辨率和设备做出适当的调整</h6>
+    <div class="row-fluid">
+        <div class="span4" style="background-color: #d4d4d4">...</div>
+        <div class="span8" style="background-color: #7ab5d3">...</div>
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!--流式栅格的偏移-->
+    <h6>流式栅格的偏移</h6>
+    <div class="row-fluid">
+        <div class="span4" style="background-color: #7ab5d3">span4...</div>
+        <div class="span4 offset2" style="background-color: #727743">span4 offset2...</div>
+    </div>
+    <!--流式嵌套布局-->
+    <h6>和固定栅格的嵌套有一点不同：被嵌套的列数之和要等于12。这是因为流式栅格使用百分比来设置每列的宽度</h6>
+    <div class="row-fluid">
+        <div class="span12" style="background-color: #3a776e">
+            Fluid 12 span12
+            <div class="row-fluid">
+                <div class="span6" style="background-color: #d4d4d4">
+                    Fluid 6 span6
+                    <div class="row-fluid">
+                        <div class="span6" style="background-color: grey">Fluid 6 span6</div>
+                        <div class="span6" style="background-color: grey">Fluid 6 span6</div>
+                    </div>
+                </div>
+                <div class="span6" style="background-color: #d4d4d4">Fluid 6</div>
+            </div>
+        </div>
+    </div>
+
+    <!--固定布局-->
+    <h6>提供了一个通用的固定宽度(也可以变为响应式)的布局方式，class="container" </h6>
+    <div class="container" style="background-color: #d4d4d4">
+        固定布局
+    </div>
+
+    <!--流式布局-->
+    <h6>流式布局:利用 div class="container-fluid" 代码可以创建一个流式、两列的页面 — 非常适合于应用和文档类页面。</h6>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span2" style="background-color: grey">
+                <!--Sidebar content-->
+                Sidebar content
+            </div>
+            <div class="span10" style="background-color: #7ab5d3">
+                <!--Body content-->
+                Body content
+            </div>
+        </div>
+    </div>
+
+    <!--响应式设计-->
+    <h6>启用响应式特性:通过在文档中的 head 标签里添加合适的meta标签并引入一个额外的样式表即可启用响应式CSS。
+        如果你已经在定制页面编译好一个Bootstrap, 那么只需添加一个meta标签。</h6>
+
+
+    <!--通过添加 .lead 让段落突出显示-->
+    <p class="lead">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. <small>Nullam id dolor id nibh ultricies vehicula.</small></p>
+    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus,
+        nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis,
+        est non commodo luctus, <small>nisi erat porttitor ligula, eget lacinia odio sem nec elit.</small></p>
+
+    <!--强调类-->
+    <h5>强调类</h5>
+    <p class="muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+    <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+    <p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
+    <p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
+    <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+    <!--引用-->
+    <h5>引用</h5>
+    <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <small>Zhang Jialu says in <cite title="Source Title">回忆录</cite></small>
+    </blockquote>
+    <blockquote class="pull-right">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <small>Zhang Jialu says in <cite title="Source Title">回忆录</cite></small>
+    </blockquote>
+
+    <!--代码-->
+    <h5>行内代码：</h5>
+    <code>
+        #include &lt;studio.h&gt;<br>
+        <br>
+        int main(){<br>
+            printf("Hello World");<br>
+            return 0;<br>
+        }
+    </code>
+    <br><br>
+    <h5>多行代码：</h5>
+    <pre>
+        #include &lt;studio.h&gt;
+        int main(){
+        printf("Hello World");
+        return 0;
+        }
+    </pre>
+    <pre class="pre-scrollable" style="height: 100px;width: auto">
+        import requests
+        #引入正则表达式模块
+        import re
+        url = 'http://www.jingcaiyuedu.com/book/23999/list.html'
+        respond = requests.get(url)
+        respond.encoding = 'utf-8'
+        #print(respond.text)
+    </pre>
+    <!--图片-->
+    <!--<h5>图片</h5>
+    <img src="bootstrap/img/Poppies.jpg" class="img-circle" style="width: 200px;height: 200px">-->
+
+    <!--下拉菜单-->
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+        <li><a tabindex="-1" href="#">Action</a></li>
+        <li><a tabindex="-1" href="#">Another Action</a></li>
+        <li><a tabindex="-1" href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a tabindex="-1" href="#">Separated link</a></li>
+    </ul>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+        <li><a tabindex="-1" href="#">Action</a></li>
+        <li><a tabindex="-1" href="#">Another action</a></li>
+        <li><a tabindex="-1" href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a tabindex="-1" href="#">Separated link</a></li>
+    </ul>
+    <div class="btn-group">
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            Action
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <!-- dropdown menu links -->
+        </ul>
+    </div>
+
+    <!--导航条-->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" href="#">Title</a>
+            <ul class="nav nav-pills">
+                <li class="active"><a href="#">首页</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="#">Link</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+            <form class="navbar-form pull-right">
+                <input type="text" class="span2">
+                <button type="submit" class="btn">Submit</button>
+            </form>
+            <form class="navbar-search pull-right">
+                <input class="search-query" type="text" placeholder="Search">
+                <button type="submit" class="btn">Search</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
